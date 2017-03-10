@@ -1,0 +1,12 @@
+(define (square x) (* x x))
+(define (average x y) (/  (+ x y) 2 ))
+(define (improve guess x) (average guess (/ x guess) ))
+(define epsilon 0.00001)
+(define (good-enough? prev_guess guess x) (and (< (abs (- prev_guess guess)) epsilon) 
+                                               (< (abs (- x (square guess))) epsilon)))
+(define (my-sqrt x)
+  (square-iter 0 1 x))
+(define (square-iter prev_guess guess x)
+  (if (good-enough? prev_guess guess x)
+      guess
+      (square-iter guess (improve guess x) x)))
