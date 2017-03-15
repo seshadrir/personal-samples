@@ -1,0 +1,17 @@
+(define (fact-iter p c n)
+  (if (> c n)
+      p
+      (fact-iter (* p c) (+ c 1) n)      
+      )
+  )
+
+(define (fact n)
+  (if ( = n 0)
+      1
+      (fact-iter 1 1 n)
+      )
+  )
+
+(define (pascal r c)
+  (/ (fact r) (* (fact (- r c)) (fact c) ))
+  )
