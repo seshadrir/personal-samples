@@ -3,5 +3,7 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += \
-    jolly-jumpers-1.cpp
+SOURCES += 514-rails.cpp
+
+DISTFILES += \
+    learnings.txt

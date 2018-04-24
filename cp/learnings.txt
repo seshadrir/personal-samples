@@ -1,0 +1,2 @@
+1. Create test cases for edge cases
+2. Read the problem statement carefully
